@@ -3,6 +3,9 @@ _build/
 extracted/
 node_modules/
 files.zip
+files*.zip
+preview_*.png
+_tmpfiles/
 
 # Secrets
 .env
