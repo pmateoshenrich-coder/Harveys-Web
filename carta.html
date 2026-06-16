@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carta de Harvey&#8217;s · Cócteles clásicos y de autor | Coctelería Madrid Centro</title>
+<link rel="canonical" href="https://www.harveyscocktailbar.com/carta/">
+<meta name="description" content="La carta de Harvey's Cocktail Bar en Madrid Centro: cócteles clásicos (Old Fashioned, Negroni, Espresso Martini, Dry Martini), signatures de autor de Eduardo Gutiérrez, opciones sin alcohol y cocina sureña americana. San Lorenzo, 5.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Archivo:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#120807; --oxblood:#250b0b; --panel:#1c0a09;
+  --red:#bf2230; --ember:#e0531f; --gold:#c8a35a; --gold-bright:#e0c184;
+  --cream:#efe6d3; --cream-dim:rgba(239,230,211,.6); --line:rgba(200,163,90,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink); color:var(--cream);
+  font-family:'Archivo',system-ui,sans-serif; font-weight:400; line-height:1.6;
+  -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* type */
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:900;line-height:1.04;letter-spacing:-.01em}
+.eyebrow{font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);
+  font-weight:600;display:inline-block}
+.script{font-family:'Pinyon Script',cursive;font-weight:400}
+.lede{font-size:1.18rem;color:var(--cream-dim);max-width:60ch}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:.5em;font-family:'Archivo';font-weight:600;
+  font-size:.95rem;letter-spacing:.02em;padding:.85em 1.6em;border-radius:2px;cursor:pointer;
+  transition:transform .15s ease,background .2s ease,color .2s ease;border:1px solid transparent}
+.btn-primary{background:var(--red);color:#fff}
+.btn-primary:hover{background:#d6303f;transform:translateY(-1px)}
+.btn-ghost{border-color:var(--line);color:var(--cream)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold-bright)}
+.btn-gold{background:var(--gold);color:#1a0b07}
+.btn-gold:hover{background:var(--gold-bright);transform:translateY(-1px)}
+:focus-visible{outline:2px solid var(--gold-bright);outline-offset:3px}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;
+  justify-content:space-between;padding:16px 24px;
+  background:linear-gradient(180deg,rgba(18,8,7,.92),rgba(18,8,7,0));
+  transition:background .3s ease,padding .3s ease}
+.nav.solid{background:rgba(15,7,6,.96);padding:10px 24px;border-bottom:1px solid var(--line);
+  backdrop-filter:blur(8px)}
+.brand{font-family:'Fraunces',serif;font-weight:900;font-size:1.5rem;letter-spacing:0;
+  color:var(--gold-bright);text-transform:uppercase}
+.brand span{color:var(--red)}
+.nav-actions{display:flex;align-items:center;gap:14px}
+.nav-tel{font-weight:600;font-size:.9rem;letter-spacing:.02em;color:var(--cream)}
+.nav-tel:hover{color:var(--gold-bright)}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;
+  padding-bottom:7vh;overflow:hidden}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  object-position:50% 38%;z-index:0}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;
+  background:
+   radial-gradient(120% 80% at 50% 30%,rgba(224,83,31,.22),transparent 60%),
+   linear-gradient(180deg,rgba(18,8,7,.55) 0%,rgba(18,8,7,.1) 35%,rgba(18,8,7,.82) 86%,var(--ink) 100%)}
+.hero-glow{position:absolute;left:50%;top:30%;transform:translate(-50%,-50%);
+  width:70vw;height:50vh;z-index:1;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(191,34,48,.4),transparent 70%);
+  filter:blur(40px);animation:breathe 7s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:.55}50%{opacity:.9}}
+.hero-content{position:relative;z-index:2;max-width:760px}
+.hero h1{font-size:clamp(2.6rem,6vw,4.6rem);margin:.35em 0 .5em;text-wrap:balance}
+.hero h1 em{font-family:'Fraunces';font-style:italic;font-weight:500;color:var(--gold-bright)}
+.hero .lede{font-size:clamp(1.05rem,1.6vw,1.28rem);color:var(--cream)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.hero-meta{margin-top:26px;font-size:.85rem;letter-spacing:.06em;color:var(--cream-dim);
+  text-transform:uppercase}
+.hero-meta b{color:var(--gold)}
+
+/* urgency band */
+.band{background:var(--oxblood);border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line)}
+.band .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding-top:18px;padding-bottom:18px;flex-wrap:wrap}
+.band p{font-family:'Fraunces';font-weight:600;font-size:1.15rem}
+.band p span{color:var(--gold-bright)}
+
+/* sections */
+section{padding:clamp(64px,10vw,120px) 0}
+.sec-head{max-width:720px;margin-bottom:48px}
+.sec-head h2{font-size:clamp(2rem,4.4vw,3.1rem);margin:.3em 0 .4em;text-wrap:balance}
+
+/* concept */
+.concept{background:
+  radial-gradient(90% 60% at 80% 0%,rgba(191,34,48,.12),transparent 60%),var(--ink)}
+.concept .lede{font-size:1.22rem;max-width:64ch}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.pillar{background:var(--panel);border:1px solid var(--line);border-radius:3px;overflow:hidden;
+  display:flex;flex-direction:column}
+.pillar .ph{aspect-ratio:4/3;overflow:hidden;background:#0c0504}
+.pillar .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.pillar:hover .ph img{transform:scale(1.05)}
+.pillar .ph.noimg{display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 40%,rgba(224,83,31,.25),var(--panel));position:relative}
+.pillar .ph.noimg .note{font-family:'Pinyon Script';font-size:2.6rem;color:var(--gold-bright);
+  text-align:center;line-height:1.1;padding:20px;opacity:.9}
+.pillar-body{padding:26px 24px 30px}
+.pillar h3{font-size:1.5rem;margin-bottom:.45em}
+.pillar p{color:var(--cream-dim);font-size:.98rem}
+.pillar .tag{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);
+  display:block;margin-bottom:10px}
+
+/* eduardo */
+.eduardo{background:var(--oxblood)}
+.eduardo-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:center}
+.eduardo-photos{position:relative}
+.eduardo-photos .main{border-radius:3px;border:1px solid var(--line);width:100%}
+.eduardo-photos .mural{position:absolute;width:46%;bottom:-26px;right:-18px;border-radius:3px;
+  border:3px solid var(--oxblood);box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.eduardo h2{font-size:clamp(2rem,4vw,2.8rem);margin:.2em 0 .5em}
+.eduardo .sign{font-family:'Pinyon Script';font-size:2.4rem;color:var(--gold-bright);margin-top:.4em}
+.eduardo p{color:var(--cream-dim);margin-bottom:1em;max-width:54ch}
+
+/* gallery */
+.gallery{background:var(--ink)}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.gal-grid img{width:100%;height:100%;object-fit:cover;border-radius:2px;aspect-ratio:2/1}
+.proof{display:flex;gap:40px;flex-wrap:wrap;margin-top:38px;align-items:center}
+.proof .stat{font-family:'Fraunces';font-weight:900;font-size:2.4rem;color:var(--gold-bright);
+  line-height:1}
+.proof .stat small{display:block;font-family:'Archivo';font-weight:500;font-size:.78rem;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--cream-dim);margin-top:8px}
+
+/* location */
+.location{background:var(--panel);border-top:1px solid var(--line)}
+.loc-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.loc-grid .door{border-radius:3px;border:1px solid var(--line);width:100%;max-width:360px}
+.loc-info h2{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:.5em}
+.loc-row{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);
+  font-size:1rem}
+.loc-row b{color:var(--gold);min-width:96px;font-weight:600;letter-spacing:.04em}
+.loc-info .btn{margin-top:26px}
+
+/* faq */
+.faq{background:var(--ink)}
+.faq-list{max-width:820px;margin:0 auto}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:22px 0;font-family:'Fraunces';font-weight:600;
+  font-size:1.18rem;display:flex;justify-content:space-between;gap:20px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:1.5rem;font-family:'Archivo';
+  transition:transform .25s ease}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 0 22px;color:var(--cream-dim);max-width:70ch}
+
+/* closing */
+.closing{position:relative;text-align:center;
+  background:radial-gradient(80% 120% at 50% 0%,rgba(191,34,48,.25),var(--ink))}
+.closing h2{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:.4em}
+.closing .script{font-size:2.2rem;color:var(--gold-bright);display:block;margin-bottom:.1em}
+.closing-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:30px}
+
+/* footer */
+footer{background:#0c0504;border-top:1px solid var(--line);padding:54px 0 120px}
+.foot-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.foot-brand{font-family:'Fraunces';font-weight:900;font-size:1.6rem;color:var(--gold-bright);
+  letter-spacing:.04em;text-transform:uppercase}
+footer p,footer a{color:var(--cream-dim);font-size:.92rem;line-height:1.8}
+footer a:hover{color:var(--gold-bright)}
+.foot-neon{font-family:'Pinyon Script';font-size:1.7rem;color:var(--red);margin-top:14px}
+
+/* mobile sticky call bar */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;
+  flex-direction:column;background:rgba(12,5,4,.97);border-top:1px solid var(--line);
+  backdrop-filter:blur(8px)}
+.callbar .cb-label{text-align:center;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);font-weight:600;padding:9px 6px 0}
+.callbar .cb-row{display:grid;grid-template-columns:1fr 1fr}
+.callbar a{padding:13px 6px;text-align:center;font-weight:600;font-size:.9rem;
+  border-right:1px solid var(--line);letter-spacing:.02em}
+.callbar .cb-row a:last-child{border-right:none}
+.callbar a.gold{color:var(--gold-bright)}
+
+@media (max-width:880px){
+  .pillars{grid-template-columns:1fr;gap:18px}
+  .eduardo-grid{grid-template-columns:1fr;gap:40px}
+  .eduardo-photos .mural{width:40%;right:0;bottom:-18px}
+  .loc-grid{grid-template-columns:1fr;gap:30px}
+  .gal-grid{grid-template-columns:1fr 1fr}
+  .nav-tel{display:none}
+  .callbar{display:flex}
+  footer{padding-bottom:90px}
+  .band .wrap{justify-content:center;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;scroll-behavior:auto!important;transition:none!important}
+}
+.brand{display:inline-flex;align-items:center;gap:11px}
+.brand-mark{height:42px;width:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.5));transition:height .3s ease}
+.nav.solid .brand-mark{height:36px}
+.closing .crest{display:block;margin:0 auto 18px;width:min(360px,84vw);filter:drop-shadow(0 8px 26px rgba(0,0,0,.5))}
+@media (max-width:880px){.brand-mark{height:36px}}
+</style>
+<style>
+.nav-links{display:flex;gap:24px;margin-left:30px;margin-right:auto}
+.nav-links a{font-size:.8rem;letter-spacing:.05em;text-transform:uppercase;color:var(--cream-dim);font-weight:500}
+.nav-links a:hover,.nav-links a.active{color:var(--gold-bright)}
+.pagehead{position:relative;min-height:58vh;display:flex;align-items:flex-end;padding-bottom:6vh;overflow:hidden}
+.pagehead-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 46%;z-index:0}
+.pagehead::after{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(120% 80% at 50% 25%,rgba(224,83,31,.18),transparent 60%),linear-gradient(180deg,rgba(18,8,7,.6),rgba(18,8,7,.3) 38%,rgba(18,8,7,.9) 88%,var(--ink))}
+.pagehead .wrap{position:relative;z-index:2}
+.pagehead h1{font-size:clamp(2.1rem,5vw,3.5rem);margin:.3em 0 .45em;max-width:18ch;text-wrap:balance}
+.breadcrumb{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--cream-dim);margin-bottom:8px}
+.breadcrumb a{color:var(--gold)}
+.breadcrumb a:hover{color:var(--gold-bright)}
+.prose p{font-size:1.1rem;color:var(--cream-dim);margin-bottom:1.1em}
+.prose p b,.prose p strong{color:var(--cream)}
+@media(max-width:880px){.nav-links{display:none}}
+
+/* feature destacado */
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.feature img{width:100%;border-radius:3px;border:1px solid var(--line)}
+@media(max-width:880px){.feature{grid-template-columns:1fr;gap:28px}}
+
+/* carta */
+.menu-head{max-width:760px;margin-bottom:40px}
+.menu-head h2{font-size:clamp(1.9rem,4vw,2.7rem);margin:.25em 0 .35em}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 56px}
+@media(max-width:760px){.menu-grid{grid-template-columns:1fr;gap:4px}}
+.mi{display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:baseline;
+  padding:16px 0;border-bottom:1px solid var(--line)}
+.mi .mi-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.18rem;color:var(--gold-bright);
+  letter-spacing:-.01em}
+.mi .mi-price{font-family:'Fraunces',serif;font-weight:600;font-size:1.08rem;color:var(--gold);
+  white-space:nowrap}
+.mi .mi-desc{grid-column:1/2;color:var(--cream-dim);font-size:.96rem;line-height:1.5;margin-top:3px}
+.menu-note{font-size:.82rem;letter-spacing:.04em;color:var(--cream-dim);margin-top:22px}
+
+/* tira de clasicos / cocina */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-top:14px}
+.split img{width:100%;border-radius:3px;border:1px solid var(--line)}
+.split h3{font-size:clamp(1.5rem,3vw,2rem);margin:.1em 0 .5em}
+.split p{color:var(--cream-dim);font-size:1.05rem;margin-bottom:1em;max-width:52ch}
+.split .eyebrow{margin-bottom:6px}
+@media(max-width:880px){.split{grid-template-columns:1fr;gap:28px}.split.rev>div:first-child{order:2}}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+  <a class="brand" href="index.html"><img class="brand-mark" src="/img/logo-emblem.webp" alt="">Harvey&#8217;s</a>
+  <div class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="carta.html" class="active">Carta</a>
+    <a href="sobre-harveys.html">Sobre Harvey&#8217;s</a>
+    <a href="donde-estamos.html">D&oacute;nde estamos</a>
+  </div>
+  <div class="nav-actions">
+    <a class="nav-tel" href="tel:+34919495297">919 495 297</a>
+  </div>
+</nav>
+<header class="pagehead">
+  <img class="pagehead-img" src="/img/carta-hero.webp" fetchpriority="high" alt="Bartender de Harvey&#8217;s con chaleco rojo rematando un c&oacute;ctel en la barra">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="index.html">Inicio</a> / Carta</p>
+    <span class="eyebrow">La carta</span>
+    <h1>Cocteler&iacute;a de autor bajo la luz roja</h1>
+    <p class="lede">Grandes cl&aacute;sicos y las signatures que firma Eduardo: sake, vinos olorosos, mezcal y siempre un punto inesperado.</p>
+  </div>
+</header>
+
+<section><div class="wrap prose" style="max-width:760px">
+  <p>En Harvey&#8217;s la carta se lee despacio, como todo aqu&iacute;. Conviven los <b>grandes cl&aacute;sicos</b> &#8212;empezando por un buen <em>dry martini</em>&#8212; con los <b>signatures</b> de Eduardo, donde aparecen el amontillado, el Pedro Xim&eacute;nez, el mezcal o la flor de sa&uacute;co. Cada trago tiene nombre propio y su peque&ntilde;a historia.</p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="feature">
+    <div>
+      <span class="eyebrow">Para empezar</span>
+      <h2 style="font-size:clamp(1.8rem,3.6vw,2.5rem);margin:.2em 0 .55em">Dos copas, una luz roja</h2>
+      <p style="color:var(--cream-dim);font-size:1.08rem;margin-bottom:1.05em">Desde un trago corto y afilado hasta algo largo y refrescante: la barra de Edu se mueve entre el cl&aacute;sico de manual y la sorpresa de autor. Si dudas, d&eacute;jate guiar &#8212;casi siempre acaba siendo la mejor decisi&oacute;n de la noche.</p>
+    </div>
+    <img src="/img/carta-coupes.webp" loading="lazy" alt="Dos c&oacute;cteles de autor servidos en copa sobre la barra de madera">
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <div class="menu-head">
+    <span class="eyebrow">La carta</span>
+    <h2>Harvey&#8217;s Signatures</h2>
+    <p class="lede" style="font-size:1.05rem">Cocteler&iacute;a de autor de Eduardo Guti&eacute;rrez.</p>
+  </div>
+  <div class="menu-grid">
+<div class="mi"><span class="mi-name">Luna Park N&ordm; 2</span><span class="mi-price">12,00&nbsp;&euro;</span><span class="mi-desc">Bourbon Maker&#8217;s Mark, amontillado, cerezas, bitters</span></div>
+<div class="mi"><span class="mi-name">Sangr&iacute;a</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Vino de Rioja, pisco, Pedro Xim&eacute;nez, brandy de albaricoque, canela y pieles de fruta</span></div>
+<div class="mi"><span class="mi-name">Lower East Side</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Ron, membrillo, moras y Campari</span></div>
+<div class="mi"><span class="mi-name">Timeless</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Mezcal, cordial de lima, manzanilla en rama y flor de sa&uacute;co St. Germain</span></div>
+<div class="mi"><span class="mi-name">Be Harry</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Bourbon Maker&#8217;s Mark infusionado en cacahuete, cacao puro y bitter</span></div>
+<div class="mi"><span class="mi-name">Bah&iacute;a</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Cacha&ccedil;a Leblon, frambuesas y flor de sa&uacute;co St. Germain</span></div>
+<div class="mi"><span class="mi-name">Doruma</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Mezcal, wasabi y cordial de naranja</span></div>
+<div class="mi"><span class="mi-name">Charly Fifties</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Caf&eacute;, amontillado, cordial de lima y espuma de flor de sa&uacute;co St. Germain</span></div>
+<div class="mi"><span class="mi-name">Dark Roast</span><span class="mi-price">12,00&nbsp;&euro;</span><span class="mi-desc">Mezcal, grano de caf&eacute; ar&aacute;bica, Pedro Xim&eacute;nez, Fernet y bitters</span></div>
+<div class="mi"><span class="mi-name">Palomo</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Tequila, cordial de pomelo y bitter italiano</span></div>
+<div class="mi"><span class="mi-name">In the Mood</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Chartreuse verde, Fernet, fruta de la pasi&oacute;n y clara de huevo</span></div>
+<div class="mi"><span class="mi-name">Manan</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Pisco, fruta de la pasi&oacute;n, pepino y vermut Noilly Prat</span></div>
+<div class="mi"><span class="mi-name">Espresso Martini</span><span class="mi-price">12,00&nbsp;&euro;</span><span class="mi-desc">Ron Santa Teresa 1796, caf&eacute; ristretto y crema de sherry</span></div>
+  </div>
+
+  <div class="menu-head" style="margin-top:64px">
+    <span class="eyebrow">Cocteler&iacute;a cl&aacute;sica</span>
+    <h2>Los grandes cl&aacute;sicos, en el coraz&oacute;n de Madrid</h2>
+    <p class="lede" style="font-size:1.05rem">Los c&oacute;cteles m&aacute;s pedidos del mundo, servidos como mandan los c&aacute;nones. Todos, 11&nbsp;&euro;.</p>
+  </div>
+  <div class="menu-grid">
+<div class="mi"><span class="mi-name">Old Fashioned</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Bourbon, az&uacute;car, bitters y twist de naranja</span></div>
+<div class="mi"><span class="mi-name">Negroni</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Ginebra, Campari y vermut rojo a partes iguales</span></div>
+<div class="mi"><span class="mi-name">Dry Martini</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Ginebra, vermut seco y aceituna o twist de lim&oacute;n</span></div>
+<div class="mi"><span class="mi-name">Daiquiri</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Ron blanco, lima y az&uacute;car</span></div>
+<div class="mi"><span class="mi-name">Whiskey Sour</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Bourbon, lim&oacute;n, az&uacute;car y clara de huevo</span></div>
+<div class="mi"><span class="mi-name">Manhattan</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Bourbon o centeno, vermut rojo y bitters</span></div>
+<div class="mi"><span class="mi-name">Margarita</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Tequila, triple seco y lima</span></div>
+<div class="mi"><span class="mi-name">Mojito</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Ron blanco, lima, hierbabuena, az&uacute;car y soda</span></div>
+<div class="mi"><span class="mi-name">Pornstar Martini</span><span class="mi-price">11,00&nbsp;&euro;</span><span class="mi-desc">Vodka a la vainilla, maracuy&aacute;, lima y un sidecar de cava</span></div>
+  </div>
+
+  <div class="menu-head" style="margin-top:64px">
+    <h2>Sin alcohol</h2>
+    <p class="lede" style="font-size:1.05rem">Tragos sin alcohol con la misma intenci&oacute;n que el resto de la carta.</p>
+  </div>
+  <div class="menu-grid">
+<div class="mi"><span class="mi-name">Ojos Verdes</span><span class="mi-price">10,00&nbsp;&euro;</span><span class="mi-desc">Cordial de pepino, sirope de almendras y lima</span></div>
+<div class="mi"><span class="mi-name">Falsa Flor</span><span class="mi-price">10,00&nbsp;&euro;</span><span class="mi-desc">Ar&aacute;ndanos, mosto, cardamomo y pieles de fruta</span></div>
+<div class="mi"><span class="mi-name">Indian Summer</span><span class="mi-price">10,00&nbsp;&euro;</span><span class="mi-desc">Coco, hierbabuena, clavo y cordial de pimienta Penja</span></div>
+  </div>
+  <p class="menu-note">Carta orientativa; la disponibilidad puede variar. ¿Una versi&oacute;n sin alcohol de tu cl&aacute;sico favorito? Solo tienes que ped&iacute;rsela a la barra.</p>
+</div></section>
+
+<section class="eduardo"><div class="wrap">
+  <div class="split rev">
+    <div>
+      <span class="eyebrow">Los cl&aacute;sicos</span>
+      <h3>El dry martini, como mandan los c&aacute;nones</h3>
+      <p>M&aacute;s all&aacute; de la carta de autor, en Harvey&#8217;s nunca falta el repertorio de siempre. Edu volvi&oacute; de Nueva York enamorado del oficio cl&aacute;sico, y el <em>dry martini</em> es su forma de demostrarlo: fr&iacute;o, seco y sin prisa.</p>
+    </div>
+    <img src="/img/carta-martini.webp" loading="lazy" alt="Dry martini con aceitunas reci&eacute;n rematado en la barra de Harvey&#8217;s">
+  </div>
+</div></section>
+
+<section><div class="wrap prose" style="max-width:760px;text-align:center">
+  <span class="eyebrow">Y para acompa&ntilde;ar</span>
+  <h2 style="font-size:clamp(1.7rem,3.4vw,2.3rem);margin:.2em 0 .5em">Cocina sure&ntilde;a americana</h2>
+  <p>Tomates verdes fritos, jambalaya, alitas y la hamburguesa de chili: comfort food del sur de Estados Unidos que casi nadie tiene en una cocteler&iacute;a de Madrid. <b>La carta de cocina al completo llega muy pronto a esta p&aacute;gina.</b></p>
+</div></section>
+<section class="closing">
+  <div class="wrap">
+    <img class="crest" src="/img/logo-crest.webp" loading="lazy" alt="Harvey&#8217;s · The invisible Bar">
+    <span class="script">Deep in the night&#8230;</span>
+    <h2>Tu mesa te espera</h2>
+    <p class="lede" style="margin:0 auto">Baja a San Lorenzo, 5. Pide algo cl&aacute;sico, d&eacute;jate llevar por la m&uacute;sica y qu&eacute;date hasta tarde.</p>
+    <div class="closing-cta">
+      <a class="btn btn-primary" href="tel:+34919495297">Reservar ahora</a>
+      <a class="btn btn-ghost" href="reservar-grupos.html">Reservas para grupos</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap foot-grid">
+    <div><div class="foot-brand">Harvey&#8217;s</div><p class="foot-neon">the invisible bar</p></div>
+    <div><p><b style="color:var(--gold)">Explorar</b><br><a href="index.html">Inicio</a><br><a href="carta.html">Carta</a><br><a href="sobre-harveys.html">Sobre Harvey&#8217;s</a><br><a href="donde-estamos.html">D&oacute;nde estamos</a><br><a href="reservar-grupos.html">Reservar grupos</a></p></div>
+    <div><p><b style="color:var(--gold)">Direcci&oacute;n</b><br>Calle de San Lorenzo, 5<br>28004 Madrid</p></div>
+    <div><p><b style="color:var(--gold)">Horario</b><br>Lun&#8211;Dom · 17:00&#8211;02:00<br><a href="tel:+34919495297">919 495 297</a></p></div>
+    <div><p><b style="color:var(--gold)">S&iacute;guenos</b><br><a href="https://www.instagram.com/harveystheinvisiblebar" target="_blank" rel="noopener">@harveystheinvisiblebar</a></p></div>
+  </div>
+</footer>
+<div class="callbar">
+  <div class="cb-label">Elige tu forma de hacer la reserva</div>
+  <div class="cb-row">
+    <a class="gold" href="tel:+34919495297">Llamar</a>
+    <a href="https://wa.me/34919495297" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</div>
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>{nav.classList.toggle('solid',scrollY>60)},{passive:true});
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Menu","name":"Carta de Harvey's Cocktail Bar","inLanguage":"es","hasMenuSection":[
+{"@type":"MenuSection","name":"Harvey's Signatures","description":"Cocteler\u00eda de autor de Eduardo Guti\u00e9rrez.","hasMenuItem":[{"@type":"MenuItem","name":"Luna Park Nº 2","description":"Bourbon Maker's Mark, amontillado, cerezas, bitters","offers":{"@type":"Offer","price":"12.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Sangría","description":"Vino de Rioja, pisco, Pedro Ximénez, brandy de albaricoque, canela y pieles de fruta","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Lower East Side","description":"Ron, membrillo, moras y Campari","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Timeless","description":"Mezcal, cordial de lima, manzanilla en rama y flor de saúco St. Germain","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Be Harry","description":"Bourbon Maker's Mark infusionado en cacahuete, cacao puro y bitter","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Bahía","description":"Cachaça Leblon, frambuesas y flor de saúco St. Germain","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Doruma","description":"Mezcal, wasabi y cordial de naranja","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Charly Fifties","description":"Café, amontillado, cordial de lima y espuma de flor de saúco St. Germain","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Dark Roast","description":"Mezcal, grano de café arábica, Pedro Ximénez, Fernet y bitters","offers":{"@type":"Offer","price":"12.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Palomo","description":"Tequila, cordial de pomelo y bitter italiano","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"In the Mood","description":"Chartreuse verde, Fernet, fruta de la pasión y clara de huevo","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Manan","description":"Pisco, fruta de la pasión, pepino y vermut Noilly Prat","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Espresso Martini","description":"Ron Santa Teresa 1796, café ristretto y crema de sherry","offers":{"@type":"Offer","price":"12.00","priceCurrency":"EUR"}}]},
+{"@type":"MenuSection","name":"Cocteler\u00eda cl\u00e1sica","description":"Los grandes cl\u00e1sicos de cocteler\u00eda en el centro de Madrid.","hasMenuItem":[{"@type":"MenuItem","name":"Old Fashioned","description":"Bourbon, azúcar, bitters y twist de naranja","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Negroni","description":"Ginebra, Campari y vermut rojo a partes iguales","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Dry Martini","description":"Ginebra, vermut seco y aceituna o twist de limón","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Daiquiri","description":"Ron blanco, lima y azúcar","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Whiskey Sour","description":"Bourbon, limón, azúcar y clara de huevo","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Manhattan","description":"Bourbon o centeno, vermut rojo y bitters","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Margarita","description":"Tequila, triple seco y lima","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Mojito","description":"Ron blanco, lima, hierbabuena, azúcar y soda","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Pornstar Martini","description":"Vodka a la vainilla, maracuyá, lima y un sidecar de cava","offers":{"@type":"Offer","price":"11.00","priceCurrency":"EUR"}}]},
+{"@type":"MenuSection","name":"Sin alcohol","hasMenuItem":[{"@type":"MenuItem","name":"Ojos Verdes","description":"Cordial de pepino, sirope de almendras y lima","offers":{"@type":"Offer","price":"10.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Falsa Flor","description":"Arándanos, mosto, cardamomo y pieles de fruta","offers":{"@type":"Offer","price":"10.00","priceCurrency":"EUR"}},{"@type":"MenuItem","name":"Indian Summer","description":"Coco, hierbabuena, clavo y cordial de pimienta Penja","offers":{"@type":"Offer","price":"10.00","priceCurrency":"EUR"}}]}
+],"provider":{"@type":"BarOrPub","name":"Harvey's Cocktail Bar","address":{"@type":"PostalAddress","streetAddress":"Calle de San Lorenzo, 5","addressLocality":"Madrid","postalCode":"28004","addressCountry":"ES"},"telephone":"+34919495297","url":"https://www.harveyscocktailbar.com/carta/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://www.harveyscocktailbar.com/"},{"@type":"ListItem","position":2,"name":"Carta","item":"https://www.harveyscocktailbar.com/carta/"}]}
+</script>
+</body>
+</html>

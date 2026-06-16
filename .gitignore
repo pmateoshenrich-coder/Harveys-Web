@@ -1,0 +1,14 @@
+# Tooling / build (no se publica)
+_build/
+extracted/
+node_modules/
+files.zip
+
+# Secrets
+.env
+.env.txt
+*.token
+
+# Sistema
+.DS_Store
+Thumbs.db
